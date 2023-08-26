@@ -1,0 +1,19 @@
+﻿#aboutTitle {
+    margin: 2%;
+    width: 96%;
+    text-align: center;
+}
+
+#accordionExample {
+    margin: 2%;
+    width: 96%;
+    height: 100%;
+}
+
+@media (min-width: 990px) {
+    .footing {
+        margin-top: 10.5%;
+    }
+}
+
+

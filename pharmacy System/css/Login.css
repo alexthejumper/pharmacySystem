@@ -1,0 +1,12 @@
+﻿.container {
+    padding-bottom: 12%;
+}
+
+#forgotP {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.headertitlebox {
+    height: 20vh;
+}

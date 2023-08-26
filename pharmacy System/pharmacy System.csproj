@@ -1,0 +1,416 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1A7125EB-C28E-415D-BED8-CC1F6FE82625}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pharmacy_System</RootNamespace>
+    <AssemblyName>pharmacy System</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44390</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\User\Downloads\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\OnlinePharmacyDB.mdf" />
+    <Content Include="App_Data\OnlinePharmacyDB_log.ldf">
+      <DependentUpon>OnlinePharmacyDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="css\about.css" />
+    <Content Include="css\contact.css" />
+    <Content Include="css\doctorDetails.css" />
+    <Content Include="css\forgotPassword.css" />
+    <Content Include="css\homePage.css" />
+    <Content Include="css\homeHome.css" />
+    <Content Include="css\Login.css" />
+    <Content Include="css\registrationCss.css" />
+    <Content Include="css\starterPage.css" />
+    <Content Include="images\generaluser.png" />
+    <Content Include="images\mastercard.png" />
+    <Content Include="images\mcb.png" />
+    <Content Include="images\paypal.png" />
+    <Content Include="images\pha.jpg" />
+    <Content Include="images\pharma.jpg" />
+    <Content Include="images\pharmacy background.jpg" />
+    <Content Include="images\pngwing.com.png" />
+    <Content Include="images\pngwing.com2.png" />
+    <Content Include="images\sbm.jpg" />
+    <Content Include="images\sbm2.png" />
+    <Content Include="images\visa.jpg" />
+    <Content Include="scripts\login.js" />
+    <Content Include="scripts\registationJS.js" />
+    <Content Include="Web Forms\adminHome.aspx" />
+    <Content Include="Web Forms\checkout.aspx" />
+    <Content Include="Web Forms\contact.aspx" />
+    <Content Include="Web Forms\medicalRecordsPharmacist.aspx" />
+    <Content Include="Web Forms\paymentSuccesful.aspx" />
+    <Content Include="Web Forms\reportView.aspx" />
+    <Content Include="Web Forms\updateCustomer.aspx" />
+    <Content Include="Web Forms\updatePharmacist.aspx" />
+    <Content Include="Web Forms\viewCart.aspx" />
+    <Content Include="Web Forms\doctorDetails.aspx" />
+    <Content Include="Web Forms\Login.aspx" />
+    <Content Include="Web Forms\ForgotPassword1.aspx" />
+    <Content Include="Web Forms\Home.aspx" />
+    <Content Include="Web Forms\About.aspx" />
+    <Content Include="Web Forms\manageMedicine.aspx" />
+    <Content Include="Web Forms\manageStock.aspx" />
+    <Content Include="Web Forms\medicalRecords.aspx" />
+    <Content Include="Web Forms\MotherCare.aspx" />
+    <Content Include="Web Forms\pharmacyPrescriptions.aspx" />
+    <Content Include="Web Forms\prescriptionUpload.aspx" />
+    <Content Include="Web Forms\requestAppointment.aspx" />
+    <Content Include="Web Forms\viewPayments.aspx" />
+    <Content Include="Web Forms\viewPrescriptions.aspx" />
+    <Content Include="Web Forms\viewProductMothers.aspx" />
+    <Content Include="Web Forms\viewProductChildren.aspx" />
+    <Content Include="Web Forms\viewUploadedPrescription.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web Forms\Registration.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Master Pages\Doctor.Master.cs">
+      <DependentUpon>Doctor.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Pages\Doctor.Master.designer.cs">
+      <DependentUpon>Doctor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master Pages\HomePage.Master.cs">
+      <DependentUpon>HomePage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Pages\HomePage.Master.designer.cs">
+      <DependentUpon>HomePage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master Pages\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Pages\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master Pages\Pharmacist.Master.cs">
+      <DependentUpon>Pharmacist.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Pages\Pharmacist.Master.designer.cs">
+      <DependentUpon>Pharmacist.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Master Pages\Starter.Master.cs">
+      <DependentUpon>Starter.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Pages\Starter.Master.designer.cs">
+      <DependentUpon>Starter.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\adminHome.aspx.cs">
+      <DependentUpon>adminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\adminHome.aspx.designer.cs">
+      <DependentUpon>adminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\checkout.aspx.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\checkout.aspx.designer.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\medicalRecordsPharmacist.aspx.cs">
+      <DependentUpon>medicalRecordsPharmacist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\medicalRecordsPharmacist.aspx.designer.cs">
+      <DependentUpon>medicalRecordsPharmacist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\paymentSuccesful.aspx.cs">
+      <DependentUpon>paymentSuccesful.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\paymentSuccesful.aspx.designer.cs">
+      <DependentUpon>paymentSuccesful.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\reportView.aspx.cs">
+      <DependentUpon>reportView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\reportView.aspx.designer.cs">
+      <DependentUpon>reportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\updateCustomer.aspx.cs">
+      <DependentUpon>updateCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\updateCustomer.aspx.designer.cs">
+      <DependentUpon>updateCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\updatePharmacist.aspx.cs">
+      <DependentUpon>updatePharmacist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\updatePharmacist.aspx.designer.cs">
+      <DependentUpon>updatePharmacist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\viewCart.aspx.cs">
+      <DependentUpon>viewCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\viewCart.aspx.designer.cs">
+      <DependentUpon>viewCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\doctorDetails.aspx.cs">
+      <DependentUpon>doctorDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\doctorDetails.aspx.designer.cs">
+      <DependentUpon>doctorDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\manageMedicine.aspx.cs">
+      <DependentUpon>manageMedicine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\manageMedicine.aspx.designer.cs">
+      <DependentUpon>manageMedicine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\manageStock.aspx.cs">
+      <DependentUpon>manageStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\manageStock.aspx.designer.cs">
+      <DependentUpon>manageStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\medicalRecords.aspx.cs">
+      <DependentUpon>medicalRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\medicalRecords.aspx.designer.cs">
+      <DependentUpon>medicalRecords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\MotherCare.aspx.cs">
+      <DependentUpon>MotherCare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\MotherCare.aspx.designer.cs">
+      <DependentUpon>MotherCare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\pharmacyPrescriptions.aspx.cs">
+      <DependentUpon>pharmacyPrescriptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\pharmacyPrescriptions.aspx.designer.cs">
+      <DependentUpon>pharmacyPrescriptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\prescriptionUpload.aspx.cs">
+      <DependentUpon>prescriptionUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\prescriptionUpload.aspx.designer.cs">
+      <DependentUpon>prescriptionUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\ForgotPassword1.aspx.cs">
+      <DependentUpon>ForgotPassword1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\ForgotPassword1.aspx.designer.cs">
+      <DependentUpon>ForgotPassword1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\requestAppointment.aspx.cs">
+      <DependentUpon>requestAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\requestAppointment.aspx.designer.cs">
+      <DependentUpon>requestAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\viewPayments.aspx.cs">
+      <DependentUpon>viewPayments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\viewPayments.aspx.designer.cs">
+      <DependentUpon>viewPayments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\viewPrescriptions.aspx.cs">
+      <DependentUpon>viewPrescriptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\viewPrescriptions.aspx.designer.cs">
+      <DependentUpon>viewPrescriptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\viewProductMothers.aspx.cs">
+      <DependentUpon>viewProductMothers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\viewProductMothers.aspx.designer.cs">
+      <DependentUpon>viewProductMothers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\viewProductChildren.aspx.cs">
+      <DependentUpon>viewProductChildren.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\viewProductChildren.aspx.designer.cs">
+      <DependentUpon>viewProductChildren.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Forms\viewUploadedPrescription.aspx.cs">
+      <DependentUpon>viewUploadedPrescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Forms\viewUploadedPrescription.aspx.designer.cs">
+      <DependentUpon>viewUploadedPrescription.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master Pages\HomePage.Master" />
+    <Content Include="Master Pages\Admin.Master" />
+    <Content Include="Master Pages\Pharmacist.Master" />
+    <Content Include="Master Pages\Doctor.Master" />
+    <None Include="packages.config" />
+    <Content Include="Master Pages\Starter.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images2\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51666</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44390/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

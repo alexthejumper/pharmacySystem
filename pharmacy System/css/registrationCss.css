@@ -1,0 +1,39 @@
+﻿.container {
+    margin-top: 5%;
+    margin-bottom: 13%;
+}
+
+.form-group div{
+    margin-bottom: 5px;
+}
+
+.label {
+    font-size: 17px;
+}
+
+.headertitle {
+    margin-top: 50px;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.signup{
+    background-color: lightseagreen;
+    color: white;
+}
+
+.signup:hover {
+    background-color: white;
+    color: lightseagreen;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.appear {
+    display: block;
+}
